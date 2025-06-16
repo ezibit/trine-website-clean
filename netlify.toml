@@ -1,0 +1,120 @@
+# Netlify configuration for TRINE AI Music Label website
+
+[build]
+  # Build command
+  command = "npm run build"
+  
+  # Directory to publish
+  publish = "dist"
+  
+  # Node.js version
+  environment = { NODE_VERSION = "18" }
+
+# Redirect rules for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking
+    X-Frame-Options = "DENY"
+    
+    # XSS protection
+    X-XSS-Protection = "1; mode=block"
+    
+    # Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+    
+    # Referrer policy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Content Security Policy
+    Content-Security-Policy = '''
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://unpkg.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data: https: blob:;
+      media-src 'self' https: blob:;
+      connect-src 'self' https: wss:;
+      worker-src 'self' blob:;
+    '''
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Cache fonts
+[[headers]]
+  for = "*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Form handling (if using Netlify Forms)
+# Uncomment and modify as needed
+# [[forms]]
+#   name = "artist-submission"
+#   action = "/thank-you"
+#   
+# [[forms]]
+#   name = "contact"
+#   action = "/thank-you"
+
+# Environment variables (set in Netlify dashboard)
+# VITE_API_BASE_URL = "https://api.trine.studio"
+# VITE_AIRTABLE_BASE_ID = "your_base_id"
+# VITE_AIRTABLE_API_KEY = "your_api_key"
+# VITE_FORMSPREE_ID = "your_form_id"
+
+# Build plugins (optional)
+# [[plugins]]
+#   package = "netlify-plugin-lighthouse"
+#   
+#   [plugins.inputs.audits]
+#     performance = true
+#     accessibility = true
+#     best-practices = true
+#     seo = true
+
+# Edge functions (for future use)
+# [[edge_functions]]
+#   function = "api"
+#   path = "/api/*"
+
