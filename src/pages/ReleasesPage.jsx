@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/Trinelogosketch1.png';
+import logo from '../assets/images/trinelogosketch1.png';
 
 const ReleasesPage = () => {
   // Mock data for releases
