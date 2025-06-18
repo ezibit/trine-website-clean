@@ -83,21 +83,30 @@ const SubmissionPage = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!formData.artistName || !formData.contactEmail || !formData.agreementCheckbox) {
+  e.preventDefault();
+  const form = e.target;
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(form)).toString()
+  })
+    .then(() =>
+      setFormStatus({
+        submitted: true,
+        error: false,
+        message:
+          'Your submission has been received! We will review your music and get back to you within 4-6 weeks.'
+      })
+    )
+    .catch(() =>
       setFormStatus({
         submitted: false,
         error: true,
-        message: 'Please fill out all required fields and agree to the terms.'
-      });
-      return;
-    }
-    setFormStatus({
-      submitted: true,
-      error: false,
-      message: 'Your submission has been received! We will review your music and get back to you within 4-6 weeks.'
-    });
-  };
+        message: 'Submission failed. Please try again or email us.'
+      })
+    );
+};
+
 
   // -----------------
   // RENDER STEP LOGIC
