@@ -590,6 +590,11 @@ const SubmissionPage = () => {
       case 5:
         return (
           <div className="space-y-6">
+            {Object.entries(formData).map(([key, val]) => (
+  <input type="hidden" name={key} value={val} key={key} />
+))}
+<input type="hidden" name="form-name" value="music-submission" />
+
             <h2 className="trine-subtitle text-2xl text-white">5. Optional Extras & Final Submission</h2>
             <div>
               <label htmlFor="artistWebsite" className="block text-white mb-2">Artist Website</label>
@@ -704,11 +709,13 @@ const SubmissionPage = () => {
           </div>
         ) : (
           <form
+          
             data-netlify="true"
             name="music-submission"
             onSubmit={handleSubmit}
             className="bg-gray-900 bg-opacity-90 p-8 rounded-xl shadow-xl"
-          >
+          >  <input type="hidden" name="form-name" value="music-submission" />
+
             {formStatus.error && (
               <div className="mb-6 bg-red-800/50 border border-red-500 text-red-200 px-6 py-4 rounded-lg">
                 {formStatus.message}
