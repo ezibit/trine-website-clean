@@ -731,7 +731,20 @@ const SubmissionPage = () => {
               </div>
             )}
             {renderStep()}
-            
+          </form>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default SubmissionPage;
+// Note: This form uses Netlify for submission handling. Ensure your site is set up to handle form submissions correctly.
+// Make sure to test the form thoroughly, especially the file upload and URL handling.
+// You may need to adjust the form handling based on your backend setup or hosting provider.
+// Consider adding validation for URLs and file formats if needed.
+// Also, ensure that the form is accessible and user-friendly across different devices and screen sizes.
+<form name="music-submission" netlify netlify-honeypot="bot-field" hidden>
   <input type="text" name="artistName" />
   <input type="text" name="aliases" />
   <input type="text" name="contactName" />
@@ -772,11 +785,4 @@ const SubmissionPage = () => {
   <input type="text" name="influences" />
   <input type="text" name="socialInitiative" />
   <input type="checkbox" name="feedbackRequest" />
-          </form>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default SubmissionPage;
+</form>
