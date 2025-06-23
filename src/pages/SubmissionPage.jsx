@@ -703,13 +703,9 @@ const SubmissionPage = () => {
             <p>{formStatus.message}</p>
           </div>
         ) : (
-          <form
-          
-            data-netlify="true"
-            name="music-submission"
-            onSubmit={handleSubmit}
+          <form netlify name="artist-submission" onSubmit={handleSubmit}
             className="bg-gray-900 bg-opacity-90 p-8 rounded-xl shadow-xl"
-          >  <input type="hidden" name="form-name" value="music-submission" />
+          >  <input type="hidden" name="form-name" value="artist-submission" />
 
             {formStatus.error && (
               <div className="mb-6 bg-red-800/50 border border-red-500 text-red-200 px-6 py-4 rounded-lg">
@@ -732,7 +728,7 @@ export default SubmissionPage;
 // Consider adding validation for URLs and file formats if needed.
 // Also, ensure that the form is accessible and user-friendly across different devices and screen sizes.
 
-<form name="music-submission" netlify netlify-honeypot="bot-field" hidden>
+<form name="artist-submission" netlify netlify-honeypot="bot-field" hidden>
   <input type="text" name="artistName" />
   <input type="text" name="aliases" />
   <input type="text" name="contactName" />
