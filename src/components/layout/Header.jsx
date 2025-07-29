@@ -20,7 +20,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="TRINE AI Music Label" className="h-12 mr-3" />
+          <img src={logo} alt="TRINE RECORDS" className="h-12 mr-3" />
           <span className="trine-logo-text text-2xl text-white">TRINE</span>
         </Link>
 

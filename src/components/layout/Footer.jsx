@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="trine-logo-text text-xl">TRINE</span>
             </Link>
             <p className="text-gray-400 mb-4">
-              TRINE AI is the label for elite AI music creators. We spotlight next-gen artists pushing boundaries with originality, emotion, and sonic innovation.
+              TRINE A label for sonic technologies beyond the veil. Curating dimensional audio artefacts and frequency anomalies.
             </p>
             <div className="flex space-x-4">
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent">
@@ -55,15 +55,15 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <span className="text-accent mr-2">Submissions:</span>
-                <a href="mailto:submissions@trine.studio" className="text-gray-400 hover:text-accent">submissions@trine.studio</a>
+                <a href="mailto:submissions@trine.studio" className="text-gray-400 hover:text-accent">submissions@trineai.studio</a>
               </li>
               <li className="flex items-start">
                 <span className="text-accent mr-2">Contact:</span>
-                <a href="mailto:contact@trine.studio" className="text-gray-400 hover:text-accent">contact@trine.studio</a>
+                <a href="mailto:contact@trine.studio" className="text-gray-400 hover:text-accent">contact@trineai.studio</a>
               </li>
               <li className="flex items-start">
                 <span className="text-accent mr-2">Enquiries:</span>
-                <a href="mailto:manager@trine.studio" className="text-gray-400 hover:text-accent">manager@trine.studio</a>
+                <a href="mailto:manager@trine.studio" className="text-gray-400 hover:text-accent">manager@trineai.studio</a>
               </li>
             </ul>
           </div>
@@ -72,7 +72,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-500">
-            &copy; {currentYear} TRINE AI Music Label. All rights reserved.
+            &copy; {currentYear} TRINE Records. All rights reserved.
           </p>
           <div className="mt-2 flex justify-center space-x-4">
             <Link to="/privacy" className="text-gray-500 hover:text-accent text-sm">Privacy Policy</Link>

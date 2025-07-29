@@ -56,9 +56,10 @@ const HomePage = () => {
       <section className="flex flex-col items-center justify-center min-h-[80vh] text-center">
         <img src={logo} alt="TRINE AI Music Label" className="w-32 h-32 mb-6 animate-pulse" />
         <h1 className="trine-logo-text text-5xl md:text-7xl mb-4 text-white">TRINE</h1>
-        <h2 className="trine-subtitle text-xl md:text-2xl mb-8 text-accent">AI MUSIC LABEL</h2>
+        <h2 className="trine-subtitle text-xl md:text-2xl mb-8 text-accent">SONIC TECHNOLOGY</h2>
         <p className="max-w-2xl text-lg mb-10 text-gray-300">
-          TRINE AI is the label for elite AI music creators. We spotlight next-gen artists pushing boundaries with originality, emotion, and sonic innovation.
+          TRINE is a signal intelligence agency disguised as a record label.
+We curate dimensional drift signals, harmonic transcriptions, and post-organic compositions from composers working at the edges of reality.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link to="/releases" className="trine-button">Explore Releases</Link>
@@ -132,7 +133,8 @@ const HomePage = () => {
         <div className="max-w-3xl mx-auto">
           <h2 className="trine-title text-3xl md:text-4xl mb-6 text-white">Join the Movement</h2>
           <p className="text-lg mb-8 text-gray-300">
-            Where human vision meets machine precision. Be part of the AI audio revolution and redefine the future of sound.
+           💠 A label for sonic technologies beyond the veil. Curating dimensional audio artefacts and frequency anomalies. We don't sign artists.
+We decode transmissions.
           </p>
           <Link to="/submit" className="trine-button text-lg px-8 py-4">Submit Your Music</Link>
         </div>
