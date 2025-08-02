@@ -269,11 +269,11 @@ const SubmissionPage = () => {
                 required
                 rows="3"
                 className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent"
-                placeholder="Describe your production process and AI involvement"
+                placeholder="Describe your production process and AI involvement if any include DAW, plugins, AI tools used, etc."
               ></textarea>
             </div>
             <div>
-              <label htmlFor="aiEngines" className="block text-white mb-2">AI Tools/Engines Used</label>
+              <label htmlFor="aiEngines" className="block text-white mb-2">AI Tools/Engines Used if any</label>
               <input
                 type="text"
                 id="aiEngines"
@@ -281,7 +281,7 @@ const SubmissionPage = () => {
                 value={formData.aiEngines}
                 onChange={handleChange}
                 className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent"
-                placeholder="Stable Audio, AIVA, Boomy, etc."
+                placeholder="Ozone, LANDR, AIVA, custom Python scripts, etc."
               />
             </div>
             <div>
@@ -693,7 +693,7 @@ const SubmissionPage = () => {
       <div className="text-center mb-16">
         <h1 className="trine-title text-5xl mb-4 text-white">Submit Your Music</h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-300">
-          Join the movement — where human vision meets machine precision. We're accepting submissions from serious AI-driven producers ready to redefine the future of sound.
+          Join the movement — where human vision meets machine precision. We're accepting submissions from serious producers ready to redefine the future of sound.
         </p>
       </div>
       <div className="max-w-4xl mx-auto">

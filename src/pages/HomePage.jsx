@@ -34,7 +34,7 @@ const HomePage = () => {
       id: 1,
       name: 'Synapse',
       image: logo, // Placeholder, will be replaced with actual artist image
-      genre: 'AI-driven Synthwave',
+      genre: 'Synthwave',
     },
     {
       id: 2,
@@ -54,7 +54,7 @@ const HomePage = () => {
     <div className="container mx-auto px-4 py-16">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center min-h-[80vh] text-center">
-        <img src={logo} alt="TRINE AI Music Label" className="w-32 h-32 mb-6 animate-pulse" />
+        <img src={logo} alt="TRINE Records" className="w-32 h-32 mb-6 animate-pulse" />
         <h1 className="trine-logo-text text-5xl md:text-7xl mb-4 text-white">TRINE</h1>
         <h2 className="trine-subtitle text-xl md:text-2xl mb-8 text-accent">SONIC TECHNOLOGY</h2>
         <p className="max-w-2xl text-lg mb-10 text-gray-300">

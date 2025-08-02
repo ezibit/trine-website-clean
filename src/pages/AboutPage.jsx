@@ -10,7 +10,7 @@ const AboutPage = () => {
         <img src={logo} alt="TRINE AI Music Label" className="w-24 h-24 mx-auto mb-6" />
         <h1 className="trine-title text-5xl mb-4 text-white">About TRINE</h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-300">
-          The label for elite AI music creators pushing boundaries with originality, emotion, and sonic innovation.
+          The label for music creators pushing boundaries with originality, emotion, and sonic innovation.
         </p>
       </div>
 
@@ -21,22 +21,22 @@ const AboutPage = () => {
             <h2 className="trine-title text-3xl mb-6 text-white">Our Story</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                TRINE AI was founded in 2025 with a singular vision: to become the premier platform for showcasing the most innovative and boundary-pushing AI-generated music in the world.
+                TRINE Records was founded in 2025 with a singular vision: to become the premier platform for showcasing the most innovative and boundary-pushing music in the world. With the advent of AI tools in production, we saw an unprecedented opportunity to redefine what music could be and how it could be created.
               </p>
               <p>
-                In an era where artificial intelligence has revolutionized creative expression, we recognized the need for a dedicated label that treats AI music not as a novelty, but as a legitimate art form with its own unique aesthetic and creative possibilities.
+                In an era where artificial intelligence has revolutionized creative expression, we recognized the need for a label that treats music not as a novelty, but as a legitimate art form with its own unique aesthetic and creative possibilities.
               </p>
               <p>
-                Our name, TRINE, represents the three-way intersection between human creativity, machine intelligence, and emotional resonance – the perfect triangle that defines truly exceptional AI music.
+                Our name, TRINE, represents the three-way intersection between human creativity, computer driven production, and emotional resonance – the perfect triangle that defines truly exceptional music.
               </p>
             </div>
           </div>
           <div className="bg-gray-900/50 p-8 rounded-lg">
             <blockquote className="text-xl italic text-gray-300">
-              "We don't see AI as replacing human musicians, but rather as expanding the creative palette available to artists. The most exciting work happens at the intersection of human vision and machine precision."
+              "We don't see AI tools as replacing human musicians, but rather as expanding the creative palette available to artists. The most exciting work happens at the intersection of human vision and machine precision. Synthesis, DAWs and AI are just tools – it's the ideas and emotions behind the music that truly matter."
               <footer className="mt-4 text-white">
                 <span className="block font-bold">Founder & Creative Director</span>
-                <span className="text-accent">TRINE AI Music Label</span>
+                <span className="text-accent">TRINE Records</span>
               </footer>
             </blockquote>
           </div>
@@ -51,21 +51,21 @@ const AboutPage = () => {
             <div className="text-accent text-4xl mb-4">01</div>
             <h3 className="trine-subtitle text-xl mb-4 text-white">Discover & Nurture</h3>
             <p className="text-gray-300">
-              We actively seek out the most innovative AI music creators and provide them with the resources, guidance, and platform they need to develop their unique sonic identities.
+              We actively seek out the most innovative music creators no matter what tools theyare using and provide them with the resources, guidance, and platform they need to develop their unique sonic identities.
             </p>
           </div>
           <div className="bg-black/50 p-8 rounded-lg">
             <div className="text-accent text-4xl mb-4">02</div>
             <h3 className="trine-subtitle text-xl mb-4 text-white">Push Boundaries</h3>
             <p className="text-gray-300">
-              We encourage our artists to explore the furthest reaches of what's possible with AI music technology, creating sounds and compositions that challenge conventional notions of electronic music.
+              We encourage our artists to explore the furthest reaches of what's possible with music technology, creating sounds and compositions that challenge conventional notions of electronic music.
             </p>
           </div>
           <div className="bg-black/50 p-8 rounded-lg">
             <div className="text-accent text-4xl mb-4">03</div>
             <h3 className="trine-subtitle text-xl mb-4 text-white">Build Community</h3>
             <p className="text-gray-300">
-              We're creating a vibrant ecosystem where AI music creators can collaborate, share knowledge, and collectively advance the state of the art in this emerging field.
+              We're creating a vibrant ecosystem where Traditional Producers and AI music creators can collaborate, share knowledge, and collectively advance the state of the art in this domain of sonic exploration.
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@ const AboutPage = () => {
             <div className="w-full md:w-2/3">
               <h3 className="trine-subtitle text-2xl mb-4 text-white">Artistic Integrity</h3>
               <p className="text-gray-300">
-                We believe that AI-generated music deserves the same respect and artistic consideration as traditionally produced music. Our curation process focuses on originality, emotional impact, and sonic innovation – not just technical novelty.
+                We believe that AI assisted music deserves the same respect and artistic consideration as traditionally produced music. Good music is good music. Our curation process focuses on originality, emotional impact, and sonic innovation no matter what tools were used to achieve the highest quality listening experience – not just technical novelty or artistic gatekeeping. It's not the illustrator that draws the picture, it is the pencil that is used to draw the picture.
               </p>
             </div>
           </div>
@@ -102,7 +102,7 @@ const AboutPage = () => {
             <div className="w-full md:w-2/3 md:order-1">
               <h3 className="trine-subtitle text-2xl mb-4 text-white">Technical Innovation</h3>
               <p className="text-gray-300">
-                We're at the forefront of AI music technology, constantly exploring new models, techniques, and approaches. Our artists have access to cutting-edge tools and expertise to push their creative boundaries.
+                We're at the forefront of music technology, constantly exploring new modes, models, techniques, and approaches. Our artists have access to cutting-edge tools and expertise to push their creative boundaries.
               </p>
             </div>
           </div>
@@ -118,7 +118,7 @@ const AboutPage = () => {
             <div className="w-full md:w-2/3">
               <h3 className="trine-subtitle text-2xl mb-4 text-white">Community Focus</h3>
               <p className="text-gray-300">
-                We're building more than just a label – we're creating a community of like-minded creators who are passionate about the future of AI music. Through events, collaborations, and knowledge sharing, we're fostering a collaborative ecosystem.
+                We're building more than just a label – we're creating a community of open-minded creators who are passionate about the future of music. Through events, collaborations, and knowledge sharing, we're fostering a collaborative ecosystem.
               </p>
             </div>
           </div>
@@ -129,7 +129,7 @@ const AboutPage = () => {
       <section className="text-center py-16 bg-gradient-to-b from-black/0 to-black/50 rounded-lg">
         <h2 className="trine-title text-3xl mb-6 text-white">Join the Movement</h2>
         <p className="max-w-2xl mx-auto text-lg mb-8 text-gray-300">
-          Whether you're an AI music creator looking for a platform or a fan eager to explore the cutting edge of music, TRINE welcomes you to be part of our journey.
+          Whether you're an innovative music creator using loops, sound design or AI assisted tools who is looking for a platform or a fan eager to explore the cutting edge of music, TRINE welcomes you to be part of our journey.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link to="/submit" className="trine-button">Submit Your Music</Link>
