@@ -12,8 +12,8 @@ const ReleasesPage = () => {
       artistId: 1,
       image: logo, // Placeholder, will be replaced with actual artwork
       releaseDate: '2025-05-15',
-      type: 'EP',
-      genre: 'AI-driven Synthwave',
+      type: 'LP',
+      genre: 'Synthwave',
       catalogNumber: 'TRINE-001',
     },
     {
