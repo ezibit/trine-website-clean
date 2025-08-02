@@ -9,8 +9,8 @@ const ArtistsPage = () => {
       id: 1,
       name: 'Synapse',
       image: logo, // Placeholder, will be replaced with actual artist image
-      genre: 'AI-driven Synthwave',
-      bio: 'Pioneering the fusion of neural networks and classic synthwave aesthetics.',
+      genre: 'Synthwave',
+      bio: 'Pioneering the fusion of modern electronic and classic synthwave aesthetics.',
     },
     {
       id: 2,
@@ -24,21 +24,21 @@ const ArtistsPage = () => {
       name: 'Neural Nexus',
       image: logo, // Placeholder, will be replaced with actual artist image
       genre: 'Neuro-Glitch',
-      bio: 'Exploring the intersection of glitch aesthetics and neural audio synthesis.',
+      bio: 'Exploring the intersection of glitch aesthetics and audio synthesis.',
     },
     {
       id: 4,
       name: 'Quantum Harmonics',
       image: logo, // Placeholder, will be replaced with actual artist image
       genre: 'Ambient / Experimental',
-      bio: 'Generating ethereal soundscapes through quantum computing algorithms.',
+      bio: 'Generating ethereal soundscapes through quantum computing sound design.',
     },
     {
       id: 5,
       name: 'Deep Dream Audio',
       image: logo, // Placeholder, will be replaced with actual artist image
       genre: 'Psychedelic Electronic',
-      bio: 'Translating visual deep dream algorithms into immersive audio experiences.',
+      bio: 'Translating visual deep dream brain activity into immersive audio experiences.',
     },
     {
       id: 6,
@@ -66,7 +66,7 @@ const ArtistsPage = () => {
       <div className="text-center mb-16">
         <h1 className="trine-title text-5xl mb-4 text-white">Our Artists</h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-300">
-          Meet the innovative AI music creators pushing the boundaries of sound on the TRINE label.
+          Meet the innovative music creators pushing the boundaries of sound on the TRINE label.
         </p>
       </div>
 
@@ -113,7 +113,7 @@ const ArtistsPage = () => {
       <div className="text-center mt-16 py-12 border-t border-gray-800">
         <h2 className="trine-title text-3xl mb-6 text-white">Are You Next?</h2>
         <p className="max-w-2xl mx-auto text-lg mb-8 text-gray-300">
-          TRINE is always looking for innovative AI music creators pushing the boundaries of sound.
+          TRINE is always looking for innovative music creators pushing the boundaries of sound.
         </p>
         <Link to="/submit" className="trine-button">Submit Your Music</Link>
       </div>

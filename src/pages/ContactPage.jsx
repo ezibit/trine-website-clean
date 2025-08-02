@@ -81,15 +81,15 @@ const ContactPage = () => {
                 <div className="space-y-1">
                   <p className="text-gray-300">
                     <span className="text-accent">General Inquiries:</span>{' '}
-                    <a href="mailto:contact@trine.studio" className="hover:text-accent">contact@trine.studio</a>
+                    <a href="mailto:contact@trine.studio" className="hover:text-accent">contact@trineai.studio</a>
                   </p>
                   <p className="text-gray-300">
                     <span className="text-accent">Artist Submissions:</span>{' '}
-                    <a href="mailto:submissions@trine.studio" className="hover:text-accent">submissions@trine.studio</a>
+                    <a href="mailto:submissions@trine.studio" className="hover:text-accent">submissions@trineai.studio</a>
                   </p>
                   <p className="text-gray-300">
                     <span className="text-accent">Management:</span>{' '}
-                    <a href="mailto:manager@trine.studio" className="hover:text-accent">manager@trine.studio</a>
+                    <a href="mailto:manager@trine.studio" className="hover:text-accent">manager@trineai.studio</a>
                   </p>
                 </div>
               </div>
