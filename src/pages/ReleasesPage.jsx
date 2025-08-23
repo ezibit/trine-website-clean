@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/trinelogosketch1.png';
+import firstWaveArt from '../assets/images/1st_wave_album_art_1400x1400.png';
 
 const ReleasesPage = () => {
   // Mock data for releases
   const allReleases = [
     {
       id: 1,
-      title: 'Neural Cascade',
-      artist: 'Synapse',
+      title: '1st Wave',
+      artist: 'Ascension Instruments',
       artistId: 1,
-      image: logo, // Placeholder, will be replaced with actual artwork
-      releaseDate: '2025-05-15',
+      image: firstWaveArt,
+      releaseDate: '2025-08-08',
       type: 'LP',
-      genre: 'Synthwave',
+      genre: 'Synthwave, Pop, Electronic',
       catalogNumber: 'TRINE-001',
     },
     {

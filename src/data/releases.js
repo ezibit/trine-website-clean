@@ -10,14 +10,14 @@ import { apiClient, airtableClient } from './api.js';
 // Mock release data
 const mockReleases = [
   {
-    id: 'neural-cascade',
-    title: 'Neural Cascade',
-    artist: 'Synapse',
-    artistId: 'synapse',
-    type: 'EP',
-    genre: 'AI-driven Synthwave',
-    releaseDate: '2025-05-15',
-    catalogNumber: 'TRINE001',
+    id: '1st-wave',
+    title: '1st Wave',
+    artist: 'Ascension Instruments',
+    artistId: '1',
+    type: 'LP',
+    genre: 'Synthwave, Pop, Electronic',
+    releaseDate: '2025-08-08',
+    catalogNumber: 'TRINE-001',
     artwork: '/api/placeholder/600/600',
     description: 'A mesmerizing journey through cascading neural networks, where synthetic melodies flow like digital waterfalls. Each track represents a different layer of artificial consciousness awakening.',
     tracks: [
