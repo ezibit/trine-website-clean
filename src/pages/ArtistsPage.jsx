@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/trinelogosketch1.png';
+import firstWaveArt from '../assets/images/1st_wave_album_art_1400x1400.png';
 
 const ArtistsPage = () => {
   // Mock data for artists
   const allArtists = [
     {
-      id: 1,
+      id: '001',
       name: 'Ascension Instruments',
       image: firstWaveArt, // Using the album art for now as artist image
       genre: 'Synthwave, Electronic, Pop, Bass, Dubstep',

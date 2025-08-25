@@ -7,7 +7,7 @@ const ReleaseDetailPage = () => {
   const { id } = useParams();
 
   // If no valid release is found, show a message
-  if (!['1', '2', '3', '4'].includes(id)) {
+  if (!['001', '002', '003', '004'].includes(id)) {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="trine-title text-4xl text-white mb-4">Release Not Found</h1>
@@ -130,15 +130,19 @@ const ReleaseDetailPage = () => {
       <section className="mb-16">
         <h2 className="trine-title text-3xl mb-6 text-white">Listen</h2>
         {release.bandcampEmbed && (
-          <div className="flex justify-center w-full">
-            <iframe 
-              style={{ border: 0, width: '700px', height: '472px' }} 
-              src={release.bandcampEmbed}
-              seamless
-              title={`${release.title} by ${release.artist}`}
-            >
-              <a href={release.streamingLinks.bandcamp}>{release.title} by {release.artist}</a>
-            </iframe>
+          <div className="w-full max-w-4xl mx-auto">
+            <div className="relative" style={{ paddingBottom: '120px' }}>
+              <iframe 
+                className="w-full h-[600px] max-h-[600px]"
+                style={{ border: 0 }} 
+                src={release.bandcampEmbed}
+                seamless
+                allow="autoplay"
+                title={`${release.title} by ${release.artist}`}
+              >
+                <a href={release.streamingLinks.bandcamp}>{release.title} by {release.artist}</a>
+              </iframe>
+            </div>
           </div>
         )}
       </section>

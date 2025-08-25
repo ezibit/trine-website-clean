@@ -9,9 +9,9 @@ const ArtistDetailPage = () => {
   // Mock artist data (in a real app, this would be fetched based on the ID)
   const artist = {
     id: parseInt(id),
-    name: id === '1' ? 'Ascension Instruments' : id === '2' ? 'Algo Rhythm' : 'Neural Nexus',
+    name: id === '001' ? 'Ascension Instruments' : id === '002' ? 'Algo Rhythm' : 'Neural Nexus',
     image: firstWaveArt, // Using album art for now
-    genre: id === '1' ? 'Synthwave, Electronic, Pop, Bass, Dubstep' : id === '2' ? 'Hybrid Dubstep' : 'Neuro-Glitch',
+    genre: id === '001' ? 'Synthwave, Electronic, Pop, Bass, Dubstep' : id === '002' ? 'Hybrid Dubstep' : 'Neuro-Glitch',
     bio: `Ascension Instruments is not an artist — it's a vessel. Crafted by a transdimensional architect working in concert with algorithmic synthesis and encrypted harmonics from future timelines. Each composition is an auditory artefact, tuned to resonate with evolving human perception.
 
     Ascension Instruments is the anonymous signal conductor translating data from the Drift — the zone between dimensions, where sound is used not for entertainment, but activation. Using next-gen compositional tools, neural synthesis, and hybrid modular workflows, Ascension Instruments creates immersive audio artefacts encoded with symbolic narrative, harmonic key patterns, and post-linear rhythm cycles.
@@ -24,11 +24,11 @@ const ArtistDetailPage = () => {
       instagram: 'https://www.instagram.com/ascension_instruments/',
     },
     aiTools: ['FL Studio', 'OZONE Pro 11', 'ChatGPT 5', 'Suno 4.5+', 'Suno studio beta', 'UVR 5', 'RipX DAW', 'Audacity'],
-    bandcampEmbed: id === '1' ? 'https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/' : null,
+    bandcampEmbed: id === '001' ? 'https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/' : null,
   };
 
   // If no valid artist is found, show a message
-  if (!['1', '2', '3'].includes(id)) {
+  if (!['001', '002', '003'].includes(id)) {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="trine-title text-4xl text-white mb-4">Artist Not Found</h1>
@@ -108,15 +108,19 @@ const ArtistDetailPage = () => {
       {/* Artist Music */}
       <section className="mb-16">
         <h2 className="trine-title text-3xl mb-6 text-white">Music</h2>
-        <div className="flex justify-center w-full">
-          <iframe 
-            style={{ border: 0, width: '700px', height: '472px' }} 
-            src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" 
-            seamless
-            title="Ascension Instruments - 1st Wave"
-          >
-            <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
-          </iframe>
+        <div className="w-full max-w-4xl mx-auto">
+          <div className="relative" style={{ paddingBottom: '120px' }}>
+            <iframe 
+              className="w-full h-[600px] max-h-[600px]"
+              style={{ border: 0 }} 
+              src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=ffffff/artwork=small/transparent=true/" 
+              seamless
+              allow="autoplay"
+              title="Ascension Instruments - 1st Wave"
+            >
+              <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
+            </iframe>
+          </div>
         </div>
       </section>
       
