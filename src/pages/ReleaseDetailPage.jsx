@@ -5,8 +5,20 @@ import firstWaveArt from '../assets/images/1st_wave_album_art_1400x1400.png';
 
 const ReleaseDetailPage = () => {
   const { id } = useParams();
+
+  // If no valid release is found, show a message
+  if (!['1', '2', '3', '4'].includes(id)) {
+    return (
+      <div className="container mx-auto px-4 py-16 text-center">
+        <h1 className="trine-title text-4xl text-white mb-4">Release Not Found</h1>
+        <Link to="/releases" className="text-accent hover:underline trine-subtitle">
+          ← Back to All Releases
+        </Link>
+      </div>
+    );
+  }
   
-  // Mock release data (in a real app, this would be fetched based on the ID)
+  // Release data
   const release = {
     id: parseInt(id),
     title: id === '1' ? '1st Wave' : id === '2' ? 'Quantum Drift' : 'Digital Dreams',

@@ -24,23 +24,20 @@ const ArtistDetailPage = () => {
       instagram: 'https://www.instagram.com/ascension_instruments/',
     },
     aiTools: ['FL Studio', 'OZONE Pro 11', 'ChatGPT 5', 'Suno 4.5+', 'Suno studio beta', 'UVR 5', 'RipX DAW', 'Audacity'],
-    releases: [
-      {
-        id: 1,
-        title: 'Neural Cascade',
-        image: logo, // Placeholder, will be replaced with actual artwork
-        releaseDate: '2025-05-15',
-        type: 'EP',
-      },
-      {
-        id: 2,
-        title: 'Digital Dreams',
-        image: logo, // Placeholder, will be replaced with actual artwork
-        releaseDate: '2025-03-10',
-        type: 'Single',
-      },
-    ],
+    bandcampEmbed: id === '1' ? 'https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/' : null,
   };
+
+  // If no valid artist is found, show a message
+  if (!['1', '2', '3'].includes(id)) {
+    return (
+      <div className="container mx-auto px-4 py-16 text-center">
+        <h1 className="trine-title text-4xl text-white mb-4">Artist Not Found</h1>
+        <Link to="/artists" className="text-accent hover:underline trine-subtitle">
+          ← Back to All Artists
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-16">
