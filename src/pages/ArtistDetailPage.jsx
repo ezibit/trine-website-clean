@@ -109,19 +109,15 @@ const ArtistDetailPage = () => {
       <section className="mb-16">
         <h2 className="trine-title text-3xl mb-6 text-white">Music</h2>
         <div className="w-full max-w-4xl mx-auto">
-          <div className="relative" style={{ paddingBottom: '120px' }}>
-            <iframe 
-              className="w-full h-[600px] max-h-[600px]"
-              style={{ border: 0 }} 
-              src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=ffffff/artwork=small/tracklist=true/transparent=true/" 
-              seamless
-              allow="autoplay; fullscreen"
-              loading="lazy"
-              referrerPolicy="no-referrer"
-              title="Ascension Instruments - 1st Wave"
+          <div className="text-center">
+            <a 
+              href="https://ascensioninstruments.bandcamp.com/album/1st-wave" 
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
-            </iframe>
+              Listen to 1st Wave on Bandcamp
+            </a>
           </div>
         </div>
       </section>
