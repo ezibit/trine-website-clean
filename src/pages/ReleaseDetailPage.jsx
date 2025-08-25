@@ -135,9 +135,11 @@ const ReleaseDetailPage = () => {
               <iframe 
                 className="w-full h-[600px] max-h-[600px]"
                 style={{ border: 0 }} 
-                src={release.bandcampEmbed}
+                src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=ffffff/artwork=small/tracklist=true/transparent=true/"
                 seamless
-                allow="autoplay"
+                allow="autoplay; fullscreen"
+                loading="lazy"
+                referrerPolicy="no-referrer"
                 title={`${release.title} by ${release.artist}`}
               >
                 <a href={release.streamingLinks.bandcamp}>{release.title} by {release.artist}</a>

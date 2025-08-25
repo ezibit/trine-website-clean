@@ -7,10 +7,10 @@ const ReleasesPage = () => {
   // Mock data for releases
   const allReleases = [
     {
-      id: 1,
+      id: '001',
       title: '1st Wave',
       artist: 'Ascension Instruments',
-      artistId: 1,
+      artistId: '001',
       image: firstWaveArt,
       releaseDate: '2025-08-08',
       type: 'LP',

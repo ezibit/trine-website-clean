@@ -113,9 +113,11 @@ const ArtistDetailPage = () => {
             <iframe 
               className="w-full h-[600px] max-h-[600px]"
               style={{ border: 0 }} 
-              src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=ffffff/artwork=small/transparent=true/" 
+              src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=ffffff/artwork=small/tracklist=true/transparent=true/" 
               seamless
-              allow="autoplay"
+              allow="autoplay; fullscreen"
+              loading="lazy"
+              referrerPolicy="no-referrer"
               title="Ascension Instruments - 1st Wave"
             >
               <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
