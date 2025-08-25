@@ -129,25 +129,13 @@ const ReleaseDetailPage = () => {
       {/* Music Player */}
       <section className="mb-16">
         <h2 className="trine-title text-3xl mb-6 text-white">Listen</h2>
-        {release.bandcampData && (
+        {id === '001' && (
           <div className="w-full max-w-4xl mx-auto">
-            <div className="relative bg-gray-900 rounded-lg overflow-hidden" style={{ minHeight: '600px' }}>
-              <iframe 
-                style={{ 
-                  border: 0,
-                  width: '100%',
-                  height: '600px',
-                  backgroundColor: '#333333'
-                }}
-                src={`https://bandcamp.com/EmbeddedPlayer/album=${release.bandcampData.albumId}/size=large/bgcol=333333/linkcol=ffffff/artwork=small/transparent=true/tracklist=true`}
-                seamless
-                title={`${release.title} by ${release.artist}`}
-                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                loading="lazy"
-              >
-                <a href={release.bandcampData.url}>{release.title} by {release.artist}</a>
-              </iframe>
-            </div>
+            <iframe style={{ border: 0, width: '350px', height: '470px' }}
+              src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" 
+              seamless>
+              <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
+            </iframe>
           </div>
         )}
       </section>
