@@ -20,10 +20,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; frame-src 'self' bandcamp.com *.bandcamp.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: *.bandcamp.com;"
-    X-Frame-Options = "ALLOW-FROM https://bandcamp.com/"
-  for = "/*"
-  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
     # Prevent clickjacking
     X-Frame-Options = "DENY"
     

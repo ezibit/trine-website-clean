@@ -31,10 +31,6 @@ const ReleaseDetailPage = () => {
     catalogNumber: `TRINE-00${id}`,
     description: id === '001' ? `1st Wave is a transmission from the Drift — encoded with symbolic narrative, harmonic key patterns, and post-linear rhythm cycles. This isn't just music, it's an auditory artifact crafted by Ascension Instruments using next-gen compositional tools, neural synthesis, and hybrid modular workflows.` : `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
     aiTools: ['Suno v4.5', 'Custom Neural Networks', 'Proprietary Synthesis Engine'],
-    bandcampData: id === '001' ? {
-      albumId: '423037208',
-      url: 'https://ascensioninstruments.bandcamp.com/album/1st-wave'
-    } : null,
     streamingLinks: {
       bandcamp: 'https://ascensioninstruments.bandcamp.com/album/1st-wave',
       appleMusic: 'https://music.apple.com',
