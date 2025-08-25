@@ -131,11 +131,22 @@ const ReleaseDetailPage = () => {
         <h2 className="trine-title text-3xl mb-6 text-white">Listen</h2>
         {id === '001' && (
           <div className="w-full max-w-4xl mx-auto">
-            <iframe style={{ border: 0, width: '350px', height: '470px' }}
-              src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" 
-              seamless>
-              <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
-            </iframe>
+            <div className="aspect-[4/3] w-full">
+              <iframe 
+                className="w-full h-full"
+                src="https://bandcamp.com/EmbeddedPlayer/v=2/album=423037208/size=large/tracklist=true/artwork=small/" 
+                allow="autoplay"
+                onLoad={(e) => {
+                  console.log('Bandcamp iframe loaded');
+                  console.log(e.target);
+                }}
+                onError={(e) => {
+                  console.error('Bandcamp iframe error:', e);
+                }}
+              >
+                <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
+              </iframe>
+            </div>
           </div>
         )}
       </section>
