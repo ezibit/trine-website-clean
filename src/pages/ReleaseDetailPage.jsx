@@ -21,19 +21,17 @@ const ReleaseDetailPage = () => {
   // Release data
   const release = {
     id: parseInt(id),
-    title: id === '1' ? '1st Wave' : id === '2' ? 'Quantum Drift' : 'Digital Dreams',
-    artist: id === '1' ? 'Ascension Instruments' : id === '2' ? 'Algo Rhythm' : 'Neural Nexus',
-    artistId: id === '1' ? 1 : id === '2' ? 2 : 3,
-    image: id === '1' ? firstWaveArt : logo,
-    releaseDate: id === '1' ? '2025-08-08' : id === '2' ? '2025-04-22' : '2025-03-10',
-    type: id === '1' ? 'LP' : id === '2' ? 'LP' : 'Single',
-    genre: id === '1' ? 'Synthwave, Electronic, Pop' : id === '2' ? 'Hybrid Dubstep' : 'Neuro-Glitch',
+    title: id === '001' ? '1st Wave' : id === '002' ? 'Quantum Drift' : 'Digital Dreams',
+    artist: id === '001' ? 'Ascension Instruments' : id === '002' ? 'Algo Rhythm' : 'Neural Nexus',
+    artistId: id === '001' ? '001' : id === '002' ? '002' : '003',
+    image: id === '001' ? firstWaveArt : logo,
+    releaseDate: id === '001' ? '2025-08-08' : id === '002' ? '2025-04-22' : '2025-03-10',
+    type: id === '001' ? 'LP' : id === '002' ? 'LP' : 'Single',
+    genre: id === '001' ? 'Synthwave, Electronic, Pop' : id === '002' ? 'Hybrid Dubstep' : 'Neuro-Glitch',
     catalogNumber: `TRINE-00${id}`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.
-    
-    Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.`,
+    description: id === '001' ? `1st Wave is a transmission from the Drift — encoded with symbolic narrative, harmonic key patterns, and post-linear rhythm cycles. This isn't just music, it's an auditory artifact crafted by Ascension Instruments using next-gen compositional tools, neural synthesis, and hybrid modular workflows.` : `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
     aiTools: ['Suno v4.5', 'Custom Neural Networks', 'Proprietary Synthesis Engine'],
-    bandcampEmbed: id === '1' ? 'https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/' : null,
+    bandcampEmbed: id === '001' ? 'https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/' : null,
     streamingLinks: {
       bandcamp: 'https://ascensioninstruments.bandcamp.com/album/1st-wave',
       appleMusic: 'https://music.apple.com',
