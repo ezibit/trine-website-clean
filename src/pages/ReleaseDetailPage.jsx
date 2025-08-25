@@ -20,7 +20,7 @@ const ReleaseDetailPage = () => {
   
   // Release data
   const release = {
-    id: parseInt(id),
+    id: id,
     title: id === '001' ? '1st Wave' : id === '002' ? 'Quantum Drift' : 'Digital Dreams',
     artist: id === '001' ? 'Ascension Instruments' : id === '002' ? 'Algo Rhythm' : 'Neural Nexus',
     artistId: id === '001' ? '001' : id === '002' ? '002' : '003',
@@ -31,12 +31,14 @@ const ReleaseDetailPage = () => {
     catalogNumber: `TRINE-00${id}`,
     description: id === '001' ? `1st Wave is a transmission from the Drift — encoded with symbolic narrative, harmonic key patterns, and post-linear rhythm cycles. This isn't just music, it's an auditory artifact crafted by Ascension Instruments using next-gen compositional tools, neural synthesis, and hybrid modular workflows.` : `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
     aiTools: ['Suno v4.5', 'Custom Neural Networks', 'Proprietary Synthesis Engine'],
-    bandcampEmbed: id === '001' ? 'https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/' : null,
+    bandcampData: id === '001' ? {
+      albumId: '423037208',
+      url: 'https://ascensioninstruments.bandcamp.com/album/1st-wave'
+    } : null,
     streamingLinks: {
       bandcamp: 'https://ascensioninstruments.bandcamp.com/album/1st-wave',
       appleMusic: 'https://music.apple.com',
-      soundcloud: 'https://soundcloud.com',
-      bandcamp: 'https://bandcamp.com',
+      soundcloud: 'https://soundcloud.com'
     },
   };
 
@@ -127,20 +129,23 @@ const ReleaseDetailPage = () => {
       {/* Music Player */}
       <section className="mb-16">
         <h2 className="trine-title text-3xl mb-6 text-white">Listen</h2>
-        {release.bandcampEmbed && (
+        {release.bandcampData && (
           <div className="w-full max-w-4xl mx-auto">
-            <div className="relative" style={{ paddingBottom: '120px' }}>
+            <div className="relative bg-gray-900 rounded-lg overflow-hidden" style={{ minHeight: '600px' }}>
               <iframe 
-                className="w-full h-[600px] max-h-[600px]"
-                style={{ border: 0 }} 
-                src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=ffffff/artwork=small/tracklist=true/transparent=true/"
+                style={{ 
+                  border: 0,
+                  width: '100%',
+                  height: '600px',
+                  backgroundColor: '#333333'
+                }}
+                src={`https://bandcamp.com/EmbeddedPlayer/album=${release.bandcampData.albumId}/size=large/bgcol=333333/linkcol=ffffff/artwork=small/transparent=true/tracklist=true`}
                 seamless
-                allow="autoplay; fullscreen"
-                loading="lazy"
-                referrerPolicy="no-referrer"
                 title={`${release.title} by ${release.artist}`}
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                loading="lazy"
               >
-                <a href={release.streamingLinks.bandcamp}>{release.title} by {release.artist}</a>
+                <a href={release.bandcampData.url}>{release.title} by {release.artist}</a>
               </iframe>
             </div>
           </div>
