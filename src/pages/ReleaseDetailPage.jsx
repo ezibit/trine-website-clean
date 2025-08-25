@@ -8,46 +8,21 @@ const ReleaseDetailPage = () => {
   // Mock release data (in a real app, this would be fetched based on the ID)
   const release = {
     id: parseInt(id),
-    title: id === '1' ? 'Neural Cascade' : id === '2' ? 'Quantum Drift' : 'Digital Dreams',
-    artist: id === '1' ? 'Synapse' : id === '2' ? 'Algo Rhythm' : 'Neural Nexus',
+    title: id === '1' ? '1st Wave' : id === '2' ? 'Quantum Drift' : 'Digital Dreams',
+    artist: id === '1' ? 'Ascension Instruments' : id === '2' ? 'Algo Rhythm' : 'Neural Nexus',
     artistId: id === '1' ? 1 : id === '2' ? 2 : 3,
-    image: logo, // Placeholder, will be replaced with actual artwork
-    releaseDate: id === '1' ? '2025-05-15' : id === '2' ? '2025-04-22' : '2025-03-10',
-    type: id === '1' ? 'EP' : id === '2' ? 'LP' : 'Single',
-    genre: id === '1' ? 'AI-driven Synthwave' : id === '2' ? 'Hybrid Dubstep' : 'Neuro-Glitch',
+    image: id === '1' ? firstWaveArt : logo,
+    releaseDate: id === '1' ? '2025-08-08' : id === '2' ? '2025-04-22' : '2025-03-10',
+    type: id === '1' ? 'LP' : id === '2' ? 'LP' : 'Single',
+    genre: id === '1' ? 'Synthwave, Electronic, Pop' : id === '2' ? 'Hybrid Dubstep' : 'Neuro-Glitch',
     catalogNumber: `TRINE-00${id}`,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.
     
     Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.`,
     aiTools: ['Suno v4.5', 'Custom Neural Networks', 'Proprietary Synthesis Engine'],
-    tracks: [
-      {
-        number: 1,
-        title: 'Neural Pathways',
-        duration: '4:32',
-        isExplicit: false,
-      },
-      {
-        number: 2,
-        title: 'Synthetic Emotions',
-        duration: '3:45',
-        isExplicit: false,
-      },
-      {
-        number: 3,
-        title: 'Digital Consciousness',
-        duration: '5:17',
-        isExplicit: false,
-      },
-      {
-        number: 4,
-        title: 'Quantum Entanglement',
-        duration: '6:08',
-        isExplicit: false,
-      },
-    ],
+    bandcampEmbed: id === '1' ? 'https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/' : null,
     streamingLinks: {
-      spotify: 'https://spotify.com',
+      bandcamp: 'https://ascensioninstruments.bandcamp.com/album/1st-wave',
       appleMusic: 'https://music.apple.com',
       soundcloud: 'https://soundcloud.com',
       bandcamp: 'https://bandcamp.com',
@@ -138,36 +113,21 @@ const ReleaseDetailPage = () => {
         </div>
       </div>
       
-      {/* Tracklist */}
+      {/* Music Player */}
       <section className="mb-16">
-        <h2 className="trine-title text-3xl mb-6 text-white">Tracklist</h2>
-        <div className="bg-gray-900/50 rounded-lg overflow-hidden">
-          <table className="w-full">
-            <thead className="bg-black/50">
-              <tr>
-                <th className="py-4 px-6 text-left text-gray-400">#</th>
-                <th className="py-4 px-6 text-left text-gray-400">Title</th>
-                <th className="py-4 px-6 text-right text-gray-400">Duration</th>
-              </tr>
-            </thead>
-            <tbody>
-              {release.tracks.map((track) => (
-                <tr key={track.number} className="border-t border-gray-800 hover:bg-black/30">
-                  <td className="py-4 px-6 text-gray-400">{track.number}</td>
-                  <td className="py-4 px-6 text-white">
-                    {track.title}
-                    {track.isExplicit && (
-                      <span className="ml-2 bg-gray-700 text-gray-300 text-xs px-1.5 py-0.5 rounded">
-                        E
-                      </span>
-                    )}
-                  </td>
-                  <td className="py-4 px-6 text-right text-gray-400">{track.duration}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <h2 className="trine-title text-3xl mb-6 text-white">Listen</h2>
+        {release.bandcampEmbed && (
+          <div className="flex justify-center w-full">
+            <iframe 
+              style={{ border: 0, width: '700px', height: '472px' }} 
+              src={release.bandcampEmbed}
+              seamless
+              title={`${release.title} by ${release.artist}`}
+            >
+              <a href={release.streamingLinks.bandcamp}>{release.title} by {release.artist}</a>
+            </iframe>
+          </div>
+        )}
       </section>
       
       {/* Release Description */}

@@ -7,10 +7,10 @@ const ArtistsPage = () => {
   const allArtists = [
     {
       id: 1,
-      name: 'Synapse',
-      image: logo, // Placeholder, will be replaced with actual artist image
-      genre: 'Synthwave',
-      bio: 'Pioneering the fusion of modern electronic and classic synthwave aesthetics.',
+      name: 'Ascension Instruments',
+      image: firstWaveArt, // Using the album art for now as artist image
+      genre: 'Synthwave, Electronic, Pop, Bass, Dubstep',
+      bio: 'Produced in tune with the static. We are the Signal.',
     },
     {
       id: 2,

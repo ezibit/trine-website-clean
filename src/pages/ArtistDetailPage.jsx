@@ -8,20 +8,21 @@ const ArtistDetailPage = () => {
   // Mock artist data (in a real app, this would be fetched based on the ID)
   const artist = {
     id: parseInt(id),
-    name: id === '1' ? 'Synapse' : id === '2' ? 'Algo Rhythm' : 'Neural Nexus',
-    image: logo, // Placeholder, will be replaced with actual artist image
-    genre: id === '1' ? 'AI-driven Synthwave' : id === '2' ? 'Hybrid Dubstep' : 'Neuro-Glitch',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.
+    name: id === '1' ? 'Ascension Instruments' : id === '2' ? 'Algo Rhythm' : 'Neural Nexus',
+    image: firstWaveArt, // Using album art for now
+    genre: id === '1' ? 'Synthwave, Electronic, Pop, Bass, Dubstep' : id === '2' ? 'Hybrid Dubstep' : 'Neuro-Glitch',
+    bio: `Ascension Instruments is not an artist — it's a vessel. Crafted by a transdimensional architect working in concert with algorithmic synthesis and encrypted harmonics from future timelines. Each composition is an auditory artefact, tuned to resonate with evolving human perception.
+
+    Ascension Instruments is the anonymous signal conductor translating data from the Drift — the zone between dimensions, where sound is used not for entertainment, but activation. Using next-gen compositional tools, neural synthesis, and hybrid modular workflows, Ascension Instruments creates immersive audio artefacts encoded with symbolic narrative, harmonic key patterns, and post-linear rhythm cycles.
     
-    Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.`,
-    location: 'Digital Realm',
+    This isn't music. It's a transmission. A code. A test. A doorway.`,
+    location: 'Australia',
     socialLinks: {
-      website: 'https://example.com',
-      soundcloud: 'https://soundcloud.com',
-      instagram: 'https://instagram.com',
-      twitter: 'https://twitter.com',
+      facebook: 'https://www.facebook.com/AscensionInstruments/',
+      bandcamp: 'https://ascensioninstruments.bandcamp.com/community',
+      instagram: 'https://www.instagram.com/ascension_instruments/',
     },
-    aiTools: ['Suno v4.5', 'Custom Neural Networks', 'Proprietary Synthesis Engine'],
+    aiTools: ['FL Studio', 'OZONE Pro 11', 'ChatGPT 5', 'Suno 4.5+', 'Suno studio beta', 'UVR 5', 'RipX DAW', 'Audacity'],
     releases: [
       {
         id: 1,
@@ -106,33 +107,18 @@ const ArtistDetailPage = () => {
         </div>
       </section>
       
-      {/* Artist Releases */}
+      {/* Artist Music */}
       <section className="mb-16">
-        <h2 className="trine-title text-3xl mb-6 text-white">Releases</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {artist.releases.map((release) => (
-            <Link to={`/releases/${release.id}`} key={release.id} className="trine-card group">
-              <div className="relative aspect-square overflow-hidden">
-                <img 
-                  src={release.image} 
-                  alt={release.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
-                  <div>
-                    <h3 className="trine-title text-xl text-white">{release.title}</h3>
-                    <p className="text-accent text-sm trine-catalog">
-                      {release.type} • {new Date(release.releaseDate).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'short', 
-                        day: 'numeric' 
-                      })}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
+        <h2 className="trine-title text-3xl mb-6 text-white">Music</h2>
+        <div className="flex justify-center w-full">
+          <iframe 
+            style={{ border: 0, width: '700px', height: '472px' }} 
+            src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" 
+            seamless
+            title="Ascension Instruments - 1st Wave"
+          >
+            <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
+          </iframe>
         </div>
       </section>
       

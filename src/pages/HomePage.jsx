@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/images/trinelogosketch1.png';
 
 const HomePage = () => {
-  // Mock data for featured releases
+  // Featured releases
   const featuredReleases = [
     {
       id: 1,
-      title: 'Neural Cascade',
-      artist: 'Synapse',
-      image: logo, // Placeholder, will be replaced with actual artwork
-      releaseDate: '2025-05-15',
+      title: '1st Wave',
+      artist: 'Ascension Instruments',
+      image: firstWaveArt,
+      releaseDate: '2025-08-08',
     },
     {
       id: 2,
@@ -32,9 +32,9 @@ const HomePage = () => {
   const featuredArtists = [
     {
       id: 1,
-      name: 'Synapse',
-      image: logo, // Placeholder, will be replaced with actual artist image
-      genre: 'Synthwave',
+      name: 'Ascension Instruments',
+      image: firstWaveArt,
+      genre: 'Synthwave, Electronic, Pop',
     },
     {
       id: 2,
