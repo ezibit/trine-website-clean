@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import logo from '../assets/images/trinelogosketch1.png';
+import firstWaveArt from '../assets/images/1st_wave_album_art_1400x1400.png';
 
 const ReleaseDetailPage = () => {
   const { id } = useParams();
