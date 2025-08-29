@@ -129,17 +129,19 @@ const ReleaseDetailPage = () => {
         {id === '001' && (
           <div className="w-full max-w-4xl mx-auto">
             <div className="bg-gray-900 p-4 rounded-lg">
-              <BandcampPlayer
-                album="423037208"
-                size="large"
-                width="100%"
-                height="120px"
-                bgColor="333333"
-                linkColor="ffffff"
-                tracklist={true}
-                artwork="small"
-                transparent={true}
-              />
+              <div style={{ width: '100%', height: '700px' }}>
+                <BandcampPlayer
+                  album="423037208"
+                  size="large"
+                  width="100%"
+                  height="700px"
+                  bgColor="333333"
+                  linkColor="ffffff"
+                  tracklist={true}
+                  artwork="small"
+                  transparent={true}
+                />
+              </div>
             </div>
             <div className="mt-4 text-center">
               <a 
