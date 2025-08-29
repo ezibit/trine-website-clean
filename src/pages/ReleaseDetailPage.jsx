@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import BandcampPlayer from 'react-bandcamp';
 import logo from '../assets/images/trinelogosketch1.png';
 import firstWaveArt from '../assets/images/1st_wave_album_art_1400x1400.png';
 
@@ -126,15 +127,30 @@ const ReleaseDetailPage = () => {
       <section className="mb-16">
         <h2 className="trine-title text-3xl mb-6 text-white">Listen</h2>
         {id === '001' && (
-          <div className="w-full max-w-4xl mx-auto text-center">
-            <a 
-              href="https://ascensioninstruments.bandcamp.com/album/1st-wave" 
-              className="text-blue-400 hover:text-blue-300 transition-colors"
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Listen to 1st Wave on Bandcamp
-            </a>
+          <div className="w-full max-w-4xl mx-auto">
+            <div className="bg-gray-900 p-4 rounded-lg">
+              <BandcampPlayer
+                album="423037208"
+                size="large"
+                width="100%"
+                height="120px"
+                bgColor="333333"
+                linkColor="ffffff"
+                tracklist={true}
+                artwork="small"
+                transparent={true}
+              />
+            </div>
+            <div className="mt-4 text-center">
+              <a 
+                href="https://ascensioninstruments.bandcamp.com/album/1st-wave" 
+                className="text-blue-400 hover:text-blue-300 transition-colors"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Open in Bandcamp
+              </a>
+            </div>
           </div>
         )}
       </section>
