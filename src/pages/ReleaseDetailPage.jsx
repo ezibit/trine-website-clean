@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import BandcampPlayer from 'react-bandcamp';
 import logo from '../assets/images/trinelogosketch1.png';
 import firstWaveArt from '../assets/images/1st_wave_album_art_1400x1400.png';
 
@@ -32,6 +31,10 @@ const ReleaseDetailPage = () => {
     catalogNumber: `TRINE-00${id}`,
     description: id === '001' ? `1st Wave is a transmission from the Drift — encoded with symbolic narrative, harmonic key patterns, and post-linear rhythm cycles. This isn't just music, it's an auditory artifact crafted by Ascension Instruments using next-gen compositional tools, neural synthesis, and hybrid modular workflows.` : `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
     aiTools: ['Suno v4.5', 'Custom Neural Networks', 'Proprietary Synthesis Engine'],
+    bandcampData: id === '001' ? {
+      albumId: '423037208',
+      url: 'https://ascensioninstruments.bandcamp.com/album/1st-wave'
+    } : null,
     streamingLinks: {
       bandcamp: 'https://ascensioninstruments.bandcamp.com/album/1st-wave',
       appleMusic: 'https://music.apple.com',
@@ -127,31 +130,18 @@ const ReleaseDetailPage = () => {
       <section className="mb-16">
         <h2 className="trine-title text-3xl mb-6 text-white">Listen</h2>
         {id === '001' && (
-          <div className="w-full max-w-4xl mx-auto">
-            <div className="bg-gray-900 p-4 rounded-lg">
-              <div style={{ width: '100%', height: '700px' }}>
-                <BandcampPlayer
-                  album="423037208"
-                  size="large"
-                  width="100%"
-                  height="700px"
-                  bgColor="333333"
-                  linkColor="ffffff"
-                  tracklist={true}
-                  artwork="small"
-                  transparent={true}
-                />
-              </div>
-            </div>
-            <div className="mt-4 text-center">
-              <a 
-                href="https://ascensioninstruments.bandcamp.com/album/1st-wave" 
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-                target="_blank" 
-                rel="noopener noreferrer"
+          <div className="w-full max-w-4xl mx-auto bg-gray-900 p-4 rounded-lg">
+            <div className="relative" style={{ paddingTop: '120%' }}>
+              <iframe 
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=ffffff/tracklist=true/transparent=true/"
+                seamless
+                frameBorder="0"
+                allow="autoplay *; encrypted-media *;"
+                loading="lazy"
               >
-                Open in Bandcamp
-              </a>
+                <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
+              </iframe>
             </div>
           </div>
         )}

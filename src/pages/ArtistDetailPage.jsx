@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import BandcampPlayer from 'react-bandcamp';
 import logo from '../assets/images/trinelogosketch1.png';
 import firstWaveArt from '../assets/images/1st_wave_album_art_1400x1400.png';
 
@@ -110,35 +109,20 @@ const ArtistDetailPage = () => {
       <section className="mb-16">
         <h2 className="trine-title text-3xl mb-6 text-white">Music</h2>
         <div className="w-full max-w-4xl mx-auto">
-          {id === '001' && (
-            <>
-              <div className="bg-gray-900 p-4 rounded-lg">
-                <div style={{ width: '100%', height: '700px' }}>
-                  <BandcampPlayer
-                    album="423037208"
-                    size="large"
-                    width="100%"
-                    height="700px"
-                    bgColor="333333"
-                    linkColor="ffffff"
-                    tracklist={true}
-                    artwork="small"
-                    transparent={true}
-                  />
-                </div>
-              </div>
-              <div className="mt-4 text-center">
-                <a 
-                  href="https://ascensioninstruments.bandcamp.com/album/1st-wave" 
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Open in Bandcamp
-                </a>
-              </div>
-            </>
-          )}
+          <div className="relative" style={{ paddingBottom: '120px' }}>
+            <iframe 
+              className="w-full h-[600px] max-h-[600px]"
+              style={{ border: 0 }} 
+              src="https://bandcamp.com/EmbeddedPlayer/album=423037208/size=large/bgcol=333333/linkcol=ffffff/artwork=small/tracklist=true/transparent=true/" 
+              seamless
+              allow="autoplay; fullscreen"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              title="Ascension Instruments - 1st Wave"
+            >
+              <a href="https://ascensioninstruments.bandcamp.com/album/1st-wave">1st Wave by Ascension Instruments</a>
+            </iframe>
+          </div>
         </div>
       </section>
       

@@ -20,7 +20,10 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate"
+    Content-Security-Policy = "default-src 'self'; frame-src 'self' bandcamp.com *.bandcamp.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: *.bandcamp.com;"
+    X-Frame-Options = "ALLOW-FROM https://bandcamp.com/"
+  for = "/*"
+  [headers.values]
     # Prevent clickjacking
     X-Frame-Options = "DENY"
     
@@ -35,16 +38,14 @@
     
     # Content Security Policy
     Content-Security-Policy = '''
-      default-src 'self' bandcamp.com *.bandcamp.com;
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://unpkg.com bandcamp.com *.bandcamp.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com bandcamp.com *.bandcamp.com;
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://unpkg.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
       font-src 'self' https://fonts.gstatic.com;
-      img-src 'self' data: https: blob: bandcamp.com *.bandcamp.com;
-      media-src 'self' https: blob: bandcamp.com *.bandcamp.com;
-      connect-src 'self' https: wss: bandcamp.com *.bandcamp.com;
+      img-src 'self' data: https: blob:;
+      media-src 'self' https: blob:;
+      connect-src 'self' https: wss:;
       worker-src 'self' blob:;
-      frame-src 'self' bandcamp.com *.bandcamp.com;
-      frame-ancestors 'self' bandcamp.com *.bandcamp.com;
     '''
 
 # Cache static assets

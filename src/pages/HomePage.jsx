@@ -7,21 +7,21 @@ const HomePage = () => {
   // Featured releases
   const featuredReleases = [
     {
-      id: '001',
+      id: 1,
       title: '1st Wave',
       artist: 'Ascension Instruments',
       image: firstWaveArt,
       releaseDate: '2025-08-08',
     },
     {
-      id: '002',
+      id: 2,
       title: 'Quantum Drift',
       artist: 'Algo Rhythm',
       image: logo, // Placeholder, will be replaced with actual artwork
       releaseDate: '2025-04-22',
     },
     {
-      id: '003',
+      id: 3,
       title: 'Digital Dreams',
       artist: 'Neural Nexus',
       image: logo, // Placeholder, will be replaced with actual artwork
@@ -32,19 +32,19 @@ const HomePage = () => {
   // Mock data for featured artists
   const featuredArtists = [
     {
-      id: '001',
+      id: 1,
       name: 'Ascension Instruments',
       image: firstWaveArt,
       genre: 'Synthwave, Electronic, Pop',
     },
     {
-      id: '002',
+      id: 2,
       name: 'Algo Rhythm',
       image: logo, // Placeholder, will be replaced with actual artist image
       genre: 'Hybrid Dubstep',
     },
     {
-      id: '003',
+      id: 3,
       name: 'Neural Nexus',
       image: logo, // Placeholder, will be replaced with actual artist image
       genre: 'Neuro-Glitch',
