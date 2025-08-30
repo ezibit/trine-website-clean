@@ -86,7 +86,7 @@ const AboutPage = () => {
             <div className="w-full md:w-2/3">
               <h3 className="trine-subtitle text-2xl mb-4 text-white">Artistic Integrity</h3>
               <p className="text-gray-300">
-                We believe that AI assisted music deserves the same respect and artistic consideration as traditionally produced music. Good music is good music. Our curation process focuses on originality, emotional impact, and sonic innovation no matter what tools were used to achieve the highest quality listening experience – not just technical novelty or artistic gatekeeping..
+                We believe that AI assisted music deserves the same respect and artistic consideration as traditionally produced music. Good music is good music. Our curation process focuses on originality, emotional impact, and sonic innovation no matter what tools were used to achieve the highest quality listening experience – not just technical novelty or artistic gatekeeping.
               </p>
             </div>
           </div>
