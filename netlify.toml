@@ -1,7 +1,7 @@
 # Netlify configuration for TRINE AI Music Label website
 
 [build]
-  command = "PNPM_ONLY_BUILT_DEPENDENCIES=esbuild,@tailwindcss/oxide,isolated-vm pnpm install --no-frozen-lockfile && pnpm rebuild esbuild @tailwindcss/oxide && pnpm build"
+  command = "npm run build"
   publish = "dist"
   environment = { NODE_VERSION = "18" }
 
