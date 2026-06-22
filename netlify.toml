@@ -1,7 +1,7 @@
 # Netlify configuration for TRINE AI Music Label website
 
 [build]
-  command = "npm run build"
+  command = "pnpm install --no-frozen-lockfile && pnpm build"
   publish = "dist"
   environment = { NODE_VERSION = "18" }
 
